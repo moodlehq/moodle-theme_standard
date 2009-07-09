@@ -27,39 +27,13 @@
 <?php } ?>
 <!-- END OF HEADER -->
 
-<!-- Note, we will not be using tables for layout evenutally. However, for now
-     I have enough other things to worry about that I don't have time to make
-     a multi-column cross-browser layout too, so this is a temporary hack. -->
-    <table id="layout-table" summary="layout">
-        <tr>
-            <?php if ($PAGE->blocks->region_has_content('side-pre')) { ?>
-            <td id="region-side-pre" class="block-region">
-                <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
-            </td>
-            <?php } ?>
-            <td id="content">
-                <?php echo $OUTPUT->skip_link_target(); ?>
-                [MAIN CONTENT GOES HERE]
-            </td>
-            <?php if ($PAGE->blocks->region_has_content('side-post')) { ?>
-            <td id="region-side-post" class="block-region">
-                <?php echo $OUTPUT->blocks_for_region('side-post') ?>
-            </td>
-            <?php } ?>
-        </tr>
-    </table>
+    <div id="content" class="clearfix">
+        [MAIN CONTENT GOES HERE]
+    </div>
 
 <!-- START OF FOOTER -->
     <div id="footer" class="clearfix">
-        <p class="helplink">
-        <?php echo page_doc_link(get_string('moodledocslink')) ?>
-        </p>
-
-        <?php
-        echo $OUTPUT->login_info();
-        echo $OUTPUT->home_link();
-        echo $OUTPUT->standard_footer_html();
-        ?>
+        <?php echo $OUTPUT->standard_footer_html() ?>
     </div>
 </div>
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
