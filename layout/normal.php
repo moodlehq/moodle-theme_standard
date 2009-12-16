@@ -2,7 +2,7 @@
 <html <?php echo $OUTPUT->htmlattributes() ?>>
 <head>
     <title><?php echo $PAGE->title ?></title>
-    <link rel="shortcut icon" href="<?php echo $CFG->themewww .'/'. current_theme() ?>/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo $OUTPUT->old_icon_url('favicon', 'theme')?>" />
     <?php echo $OUTPUT->standard_head_html() ?>
 </head>
 <body id="<?php echo $PAGE->pagetype ?>" class="<?php echo $PAGE->bodyclasses ?>">
@@ -38,7 +38,7 @@
             </td>
             <?php } ?>
             <td id="content">
-                [MAIN CONTENT GOES HERE]
+                <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>
             </td>
             <?php if ($PAGE->blocks->region_has_content('side-post', $OUTPUT)) { ?>
             <td id="region-side-post" class="block-region">

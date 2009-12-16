@@ -1,10 +1,10 @@
 <?php echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes() ?>>
 <head>
-    <?php echo $OUTPUT->standard_head_html() ?>
     <title><?php echo $PAGE->title ?></title>
-    <link rel="shortcut icon" href="<?php echo $CFG->themewww .'/'. current_theme() ?>/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo $OUTPUT->old_icon_url('favicon', 'theme')?>" />
     <meta name="description" content="<?php echo strip_tags(format_text($SITE->summary, FORMAT_HTML)) ?>" />
+    <?php echo $OUTPUT->standard_head_html() ?>
 </head>
 <body id="<?php echo $PAGE->pagetype ?>" class="<?php echo $PAGE->bodyclasses ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
@@ -14,10 +14,9 @@
     <div id="header-home" class="clearfix">
         <h1 class="headermain"><?php echo $PAGE->heading ?></h1>
         <div class="headermenu"><?php
+        echo $OUTPUT->login_info();
         if ($PAGE->headingmenu) {
             echo $PAGE->headingmenu;
-        } else {
-            echo $OUTPUT->login_info();
         }
         ?></div>
     </div>
@@ -35,7 +34,7 @@
             </td>
             <?php } ?>
             <td id="content">
-                [MAIN CONTENT GOES HERE]
+                <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>
             </td>
             <?php if ($PAGE->blocks->region_has_content('side-post', $OUTPUT)) { ?>
             <td id="region-side-post" class="block-region">

@@ -2,7 +2,7 @@
 <html <?php echo $OUTPUT->htmlattributes() ?>>
 <head>
     <title><?php echo $PAGE->title ?></title>
-    <link rel="shortcut icon" href="<?php echo $CFG->themewww .'/'. current_theme() ?>/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo $OUTPUT->old_icon_url('favicon', 'theme')?>" />
     <?php echo $OUTPUT->standard_head_html() ?>
 </head>
 <body id="<?php echo $PAGE->pagetype ?>" class="<?php echo $PAGE->bodyclasses ?>">
@@ -28,12 +28,11 @@
 <!-- END OF HEADER -->
 
     <div id="content" class="clearfix">
-        [MAIN CONTENT GOES HERE]
+        <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>
     </div>
 
 <!-- START OF FOOTER -->
     <div id="footer" class="clearfix">
-        <?php echo $OUTPUT->standard_footer_html() ?>
     </div>
 </div>
 <?php echo $OUTPUT->standard_end_of_body_html() ?>

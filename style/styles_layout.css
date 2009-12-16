@@ -26,8 +26,6 @@
   tags
   user
 
-  various modules
-
 *******************************************************************/
 
 
@@ -42,6 +40,10 @@ h4.main,
 h5.main,
 h6.main {
   text-align: center;
+}
+
+body {
+ padding: 4px;
 }
 
 #layout-table {
@@ -464,7 +466,7 @@ form.popupform label {
   width: 90%;
 }
 .groupmanagementtable td {
-  vertical-align: top;
+  vertical-align: middle;
 }
 .groupmanagementtable p {
   text-align: left;
@@ -684,7 +686,7 @@ fieldset.fdate_selector label {
 }
 /* Prevent border-collapse:collapse from bleeding through in IE6, IE7 */
 #date_selector_calendar_panel.yui-overlay-hidden table {
-  display:none;
+  *display:none;
 }
 #date_selector_calendar_panel th.calhead {
   padding-right: 2em;
@@ -1325,10 +1327,6 @@ table.explainpermissions .cell {
   margin:auto;
 }
 
-.generalboxcontent table{
-  width:100%;
-}
-
 #admin-index .adminerror,
 #admin-index .adminwarning {
   text-align:center;
@@ -1819,6 +1817,7 @@ a.skip:focus, a.skip:active {
   list-style: none;
   padding-left:0px;
   margin:3px;
+  text-align: left;
 }
 .block_tree ul {
   margin-left: 0px;
@@ -1843,7 +1842,7 @@ a.skip:focus, a.skip:active {
   font-size:90%;
 }
 .block_tree .tree_item.branch {
-  background-image: url(../../pix/t/expanded.png);
+  background-image: url([[pix:t/expanded]]);
   background-position: center left;
   background-repeat: no-repeat;
 }
@@ -1858,10 +1857,10 @@ a.skip:focus, a.skip:active {
   cursor:pointer;
 }
 .jsenabled .block_tree .collapsed .tree_item.branch {
-  background-image: url(../../pix/t/collapsed.png);
+  background-image: url([[pix:t/collapsed]]);
 }
 .jsenabled .block_tree .tree_item.emptybranch {
-  background-image: url(../../pix/t/collapsed_empty.png);
+  background-image: url([[pix:t/collapsed_empty]]);
   background-position: center left;
   background-repeat: no-repeat;
 }
@@ -1884,7 +1883,7 @@ body.has_navigation_bar {
   height:100%;
   border-right:1px solid #bbb;
   border-bottom:1px solid #bbb;
-  background-image:url(gradient_vertical.jpg);
+  background-image:url([[pix:theme|gradient_vertical]]);
   background-position:100% 0%;
   background-repeat:repeat-y;
 }
@@ -1974,10 +1973,6 @@ body.has_navigation_bar {
   padding-bottom:2px;
 }
 
-.sideblock_js_expansion .footer .adminsearchform {
-    text-align:left;
-}
-
 /***
  *** Blogs
  ***/
@@ -2001,9 +1996,14 @@ body.has_navigation_bar {
   width: auto;
 }
 
-.officialblogtags {
-    display: inline;
-    font-weight: bold;
+.block_blog_externals a.delete {
+  margin-left: 6px;
+}
+
+.block_blog_externals div.newlink {
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
 }
 
 /***
@@ -2333,6 +2333,10 @@ border-width:0px;
   width: 1.5em;
 }
 
+.course-view .activity {
+  text-align:left;
+}
+
 .course-view .current .side {
 }
 
@@ -2437,11 +2441,10 @@ border-width:0px;
   margin-bottom: 0.5em;
   border-style:solid;
   border-width:1px;
-  clear: both;
 }
 .weeks .content,
 .topics .content {
-  padding: 5px 5px 15px 5px;
+  padding: 5px;
   margin: 0 1.7em 0 1.7em;
 }
 .weeks .right,
@@ -2634,6 +2637,7 @@ body#course-info .generalbox.info {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
 }
 
 .categorylist .category.image {
@@ -2816,6 +2820,7 @@ div.allcoursegrades {
 /* gradebook edit tree */
 
 .grade-edit-tree .gradetreebox {
+  width:70%;
   margin-left:auto;
   margin-right:auto;
   margin-top:10px;
@@ -2880,10 +2885,6 @@ div.allcoursegrades {
 #grade-aggregation-help code {
   display: block;
   margin-top: 7px;
-}
-
-.gradetreebox table.simple {
-  width: 70%;
 }
 
 /***
@@ -3224,7 +3225,6 @@ body.notes .notesgroup {
 
 #qtypechoicecontainer {
   display: none;
-  background: white;
 }
 body.jsenabled #qtypechoicecontainer {
   display: block;
@@ -3493,7 +3493,7 @@ body.jsenabled #qtypechoicecontainer {
 
 .tabrow0 a span {
   padding: 10px 14px 0.35em 0;
-  background: transparent url(pix/tab/right.gif) no-repeat right top;
+  background: transparent url([[pix:theme|tab/right]]) no-repeat right top;
 }
 
 .tabrow1 li a span {
@@ -3502,29 +3502,29 @@ body.jsenabled #qtypechoicecontainer {
 
 .tabrow0 a {
   text-decoration: none;
-  background: transparent url(pix/tab/left.gif) no-repeat left top;
+  background: transparent url([[pix:theme|tab/left]]) no-repeat left top;
   margin: 0 -1px 0 0;
   padding: 10px 0 0.35em 13px;
 }
 
 .tabrow0 a:link:hover,
 .tabrow0 a:visited:hover {
-  background-image: url(pix/tab/left_hover.gif);
+  background-image: url([[pix:theme|left_hover]]);
 }
 
 .tabrow0 .here a:link:hover,
 .tabrow0 .here a:visited:hover {
-  background-image: url(pix/tab/left.gif);
+  background-image: url([[pix:theme|tab/left]]);
 }
 
 .tabrow0 a:link:hover span,
 .tabrow0 a:visited:hover span {
-  background-image: url(pix/tab/right_hover.gif);
+  background-image: url([[pix:theme|tab/right_hover]]);
 }
 
 .tabrow0 .here a:link:hover span,
 .tabrow0 .here a:visited:hover span {
-  background-image: url(pix/tab/right.gif);
+  background-image: url([[pix:theme|tab/right]]);
 }
 
 .tabrow0 .here a {
@@ -3557,7 +3557,7 @@ body.jsenabled #qtypechoicecontainer {
   list-style: none;
   border-top: 1px solid #aaa;
   line-height: normal;
-  background: transparent url(pix/tab/tabrow1.gif) repeat-x center left;
+  background: transparent url([[pix:theme|tab/tabrow1]]) repeat-x center left;
   font-size: 90%;
 }
 
@@ -4011,1675 +4011,6 @@ table.mod_index {
   margin-right:auto;
 }
 
-/***
- *** Modules: Assignment
- ***/
-
-.userpicture,
-.picture user,
-.picture teacher {
-  width:35px;
-  height: 35px;
-  vertical-align:top;
-}
-.modform {
-  text-align:center;
-}
-#wordcount {
-  text-align: right;
-}
-
-/***
- *** Modules: Chat
- ***/
-
-.nextchatsession {
-  text-align:center;
-}
-
-#mod-chat-gui_header_js-jsupdate {
-  margin:10px
-}
-#mod-chat-gui_header_js-jsupdate .chat-event,
-#mod-chat-gui_header_js-jsupdate .chat-message {
-  width:100%;
-  padding:0;
-  margin-top:7px
-  display:block;
-}
-#mod-chat-view #chatcurrentusers .chatuserdetails {
-  vertical-align: middle;
-}
-
-#mod-chat-view #enterlink {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-#mod-chat-gui_basic #participants ul {
-  margin:0px;
-  padding:0px;
-  list-style-type:none;
-}
-
-#mod-chat-gui_basic #participants ul li {
-  display:inline;
-  margin-right:10px;
-}
-
-#mod-chat-gui_basic #participants ul li .userinfo {
-  display:inline;
-}
-
-#mod-chat-gui_basic #messages dl {
-  padding:0px;
-  margin:1px;
-}
-
-#mod-chat-gui_basic #messages dd,
-#mod-chat-gui_basic #messages dt {
-  margin-left:0px;
-  margin-right:5px;
-  padding:0px;
-  display:inline;
-}
-#mod-chat-gui_ajax-index .mdl-chat-entry, .mdl-chat-my-entry {
-    clear:both;
-    display:block;
-}
-#mod-chat-gui_ajax-index #messages-list, #users-list {
-    list-style-type:none;
-    margin:0;
-    padding:0;
-}
-#mod-chat-gui_ajax-index #users-list a {
-    color: grey;
-    font-size: 10px;
-}
-#mod-chat-gui_ajax-index #chat-header {
-    font-size: 200%;
-}
-#mod-chat-gui_ajax-index #chat-header p{
-    display: inline;
-    font-size: 50%;
-}
-#mod-chat-gui_ajax-index .chat-event {
- color:grey;
- text-align:center;
-}
-#mod-chat-gui_ajax-index .time, #mod-chat-gui_ajax-index .user{
-    color: grey;
-    font-size: 9px;
-}
-
-/***
- *** Modules: Choice
- ***/
-.button {
-  text-align:center;
-}
-
-.attemptcell {
-  width:5px;
-  white-space: nowrap;
-}
-
-.anonymous,
-.names {
-  margin-left:auto;
-  margin-right:auto;
-}
-
-.downloadreport {
-  border:0px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-.choiceresponse {
-  width:100%;
-}
-.choiceresponse .picture {
-  width:10px;
-  white-space: nowrap;
-}
-
-.choiceresponse .fullname {
-  width:100%;
-  white-space: nowrap;
-}
-
-
-.results.data {
-  vertical-align:top;
-  white-space: nowrap;
-}
-
-/***
- *** Modules: Data
- ***/
-.fieldadd,
-.sortdefault,
-.defaulttemplate {
-  text-align:center;
-}
-.datapreferences {
-  text-align:center;
-}
-
-table.presets {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/***
- ***
- *** Modules: Folder
- ***/
-
-#mod-folder-view .foldertree {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/***
- *** Modules: Forum
- ***/
-
-#mod-forum-view .forummode {
-  text-align:center;
-}
-
-.forumheaderlist,
-.forumpost {
-  border-width:1px;
-  border-style:solid;
-  border-collapse:separate;
-}
-
-.forumpost {
-  margin-top: 15px;
-}
-
-.forumpost .topic {
-  padding: 4px;
-  border-style:solid;
-  border-width: 0px;
-  border-bottom-width: 1px;
-}
-
-.forumpost .commands {
-  padding-top: 0.5em;
-  text-align:right;
-  clear: both;
-}
-
-.forumpost .ratings {
-  padding-top: 1em;
-  text-align:right;
-}
-
-.forumpost .attachments {
-  padding: 7px;
-  text-align:right;
-}
-
-.forumpost .content {
-  padding: 4px;
-}
-
-.forumpost .footer {
-  padding-top: 0.5em;
-  text-align:right;
-}
-
-.forumpost .link {
-  padding-top: 0.5em;
-  text-align:right;
-}
-
-.forumpost .left {
-  width: 35px;
-  padding: 4px;
-  text-align: center;
-  vertical-align: top;
-}
-
-.mod-forum .indent {
-  margin-left: 30px;
-}
-
-body#user-view .forumpost,
-.course .forumpost {
-  width: 100%;
-}
-
-body#mod-forum-search .c0 {
-  text-align: right;
-}
-
-body#mod-forum-search .introcontent {
-  padding: 15px;
-}
-
-.forumolddiscuss {
-  text-align: right;
-}
-
-.forumheaderlist {
-  width: 100%;
-}
-
-.forumheaderlist td {
-  border-width:1px 0px 0px 1px;
-  border-style:solid;
-}
-
-.forumheaderlist .replies {
-  text-align: center;
-  white-space: nowrap;
-}
-
-.forumheaderlist .picture {
-  width: 35px;
-}
-
-.forumheaderlist .discussion .starter {
-  vertical-align: middle;
-}
-
-.forumheaderlist .lastpost {
-  white-space: nowrap;
-  text-align: right;
-}
-
-.forumheaderlist .discussion .author {
-  white-space: nowrap;
-}
-.forumolddiscuss {
-  text-align:right;
-}
-.forumaddnew,
-.forumnodiscuss,
-.noticeboxcontent {
-  text-align:center;
-}
-
-#mod-forum-view .forumaddnew {
-  margin-bottom: 20px;
-}
-
-#mod-forum-view .forumcontrol .groupmenu {
-  float: left;
-  text-align:left;
-  white-space: nowrap;
-}
-
-#mod-forum-view .groupmenu {
-  float: left;
-  text-align:left;
-  white-space: nowrap;
-}
-
-#mod-forum-view .forumcontrol .subscription {
-  float: right;
-  text-align:right;
-  white-space: nowrap;
-}
-
-#mod-forum-view .subscription {
-  float: right;
-  text-align:right;
-  white-space: nowrap;
-}
-
-#mod-forum-index .subscription {
-  float: right;
-  text-align:right;
-  white-space: nowrap;
-}
-
-#mod-forum-view .unread {
-  padding-left: 3px;
-  padding-right: 3px;
-}
-#mod-forum-discuss .forumpost.unread .content {
-  border-style: solid;
-  border-width: 2px;
-}
-#mod-forum-discuss .ratingsubmit {
-  text-align:center;
-  padding:10px;
-}
-#mod-forum-index .unread img,
-#mod-forum-view .unread img
-{
-  margin-left: 5px;
-}
-
-#mod-forum-discuss .discussioncontrols td {
-  width: 33%;
-  text-align:center;
-}
-
-#email .unsubscribelink {
-  margin-top:20px;
-  border-width: 0px 1px 0px 0px;
-  border-style: solid;
-  text-align:center;
-}
-
-#mod-forum-view .subscription {
-  margin: 5px 0;
-}
-
-/***
- *** Modules: Glossary
- ***/
-
-.glossarypost .commands {
-  width: 200px;
-  white-space: nowrap;
-}
-
-#mod-glossary-comments .glossarypost,
-#mod-glossary-comment .glossarypost {
-  margin-top: 15px;
-}
-
-.entryboxheader {
-  border-width: 1px 1px 0px 1px;
-  border-style: solid;
-}
-
-.entrybox {
-  width: 100%;
-  border-width: 0px 1px 1px 1px;
-  border-style: solid;
-}
-
-.entrybox hr {
-  border-left:none;
-  border-right:none;
-}
-
-.glossarypost {
-  width: 95%;
-  border-width:1px;
-  border-style:solid;
-  border-collapse:separate;
-  margin-left:auto;
-  margin-right:auto;
-  margin-bottom: 5px;
-  text-align: left;
-}
-
-.entrylist {
-  border-width:0px;
-}
-
-.entrylowersection {
-  padding-top: 10px;
-}
-
-.entrylowersection table{
-  width: 100%;
-}
-
-.entrylowersection .aliases {
-  text-align:center;
-}
-
-.entrylowersection .icons,
-.entrylowersection .ratings {
-  text-align:right;
-  padding-right: 5px;
-}
-
-.entrylowersection .ratings {
-  padding-bottom: 2px;
-}
-
-.glossarycategoryheader {
-  width: 95%;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-.glossaryformatheader {
-  width: 90%;
-}
-
-.glossarypost .entry {
-  padding: 3px;
-}
-
-.glossarypost .picture {
-  width: 35px;
-}
-
-.glossarycomment {
-  border-width:1px;
-  border-style:solid;
-  border-collapse:separate;
-  margin-bottom: 5px;
-  text-align: left;
-}
-
-.glossarycomment .entry {
-  padding: 3px;
-}
-
-.glossarycomment .picture {
-  width: 35px;
-}
-
-.glossarycomment .icons {
-  text-align: right;
-}
-
-.glossarydisplay {
-  width: 90%;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
-}
-
-.glossarydisplay .tabs {
-  width: 100%;
-}
-
-.glossarydisplay .separator {
-  width: 4px;
-}
-
-.glossarydisplay .tabs .selected,
-.glossarydisplay .tabs .inactive,
-.glossarydisplay .tabs .general {
-}
-
-.glossaryimportexport {
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
-}
-
-.glossarypopup {
-  width: 95%;
-}
-
-.glossaryapproval {
-  width: 100%;
-}
-
-.mod-glossary .glossarydisplay .tabs {
-  margin-bottom: 0px;
-}
-
-.mod-glossary .glossarydisplay .tabs .side {
-  border-style: none;
-  border-width: 0px;
-  width: auto;
-}
-
-.glossaryexplain,
-.glossaryaddentry {
-  text-align: center;
-}
-
-.mod-glossary .tabrow0 {
-  padding-bottom: 5px;
-}
-
-#mod-glossary-view .glossarycontrol {
-  float: right;
-  text-align:right;
-  white-space: nowrap;
-  margin: 5px 0;
-}
-
-/***
- *** Modules: Journal
- ***/
-#mod-journal-view .lastedit,
-#mod-journal-view .editend {
-  margin: 5px;
-  text-align: center;
-}
-#mod-journal-view .feedbackbox {
-  width: 75%;
-  border-collapse: separate;
-}
-#mod-journal-view .entrycontent {
-  padding: 3px;
-}
-#mod-journal-view .picture {
-  width: 35px;
-}
-#mod-journal-view .grade {
-  text-align: right;
-}
-#mod-journal-view .info {
-  margin-bottom: 5px;
-  text-align: right;
-}
-
-
-/***
- *** Modules: Label
- ***/
-
-/***
- *** Modules: Lesson
- ***/
-#mod-lesson-lesson #page .addform {
-  text-align: center;
-}
-#mod-lesson-edit #page .label {
-  font-weight: bold;
-}
-#mod-lesson-edit #page .labelcorrect {
-  text-decoration: underline;
-  font-weight: bold;
-}
-.lessonmediafilecontrol {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#mod-lesson-view #content .invisiblefieldset {
-  display: block;
-  text-align: left;
-}
-
-body.jsenabled .jshidewhenenabled {
-  display:none;
-}
-
-/***
- *** Modules: Quiz
- ***/
-
-#mod-quiz-view .quizinfo {
-  text-align: center;
-}
-#mod-quiz-view #page .quizgradefeedback,
-#mod-quiz-view #page .quizattempt
-{
-  text-align: center;
-}
-#mod-quiz-view #page .quizattemptsummary td p {
-  margin-top: 0;
-}
-#mod-quiz-view .generalbox#feedback {
-  width:70%;
-  margin-left:auto;
-  margin-right:auto;
-  padding-bottom:15px;
-}
-#mod-quiz-view .generalbox#feedback h2 {
-  margin: 0 0;
-}
-#mod-quiz-view .generalbox#feedback .overriddennotice {
-  text-align: center;
-  font-size: 0.7em;
-}
-#mod-quiz-view .generalbox#feedback h3 {
-  text-align: left;
-}
-
-.generalbox#passwordbox { /* Should probably match .generalbox#intro above */
-  width:70%;
-  margin-left:auto;
-  margin-right:auto;
-}
-#passwordform {
-  margin: 1em 0;
-}
-#mod-quiz-attempt .submitbtns,
-#mod-quiz-review .submitbtns {
-  text-align: left;
-  margin-top: 1.5em;
-}
-#mod-quiz-summary .submitbtns {
-  margin-top: 1.5em;
-}
-#mod-quiz-summary #content {
-  text-align: center;
-}
-#mod-quiz-summary .questionflag {
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-}
-#mod-quiz-attempt #quiz-timer,
-#mod-quiz-summary #quiz-timer {
-  display: none; /* Revealed by JavaScript if applicable */
-}
-#mod-quiz-summary #quiz-timer {
-  margin-top: 1em;
-}
-#mod-quiz-attempt #quiz-time-left {
-  font-weight: bold;
-}
-
-body#question-preview .quemodname,
-body#question-preview .controls
-{
-  text-align: center;
-}
-body#question-preview .quemodname, body#question-preview .controls {
-  text-align: center;
-}
-
-#mod-quiz-attempt #page .controls,
-#mod-quiz-summary #page .controls,
-#mod-quiz-review #page .controls {
-  text-align: center;
-  margin: 8px auto;
-}
-#mod-quiz-review .pagingbar {
-  margin: 1.5em auto;
-}
-#mod-quiz-review .pagingbar {
-  margin: 1.5em auto;
-}
-table.quizreviewsummary {
-  width: 100%;
-}
-table.quizreviewsummary tr {
-}
-table.quizreviewsummary th.cell {
-  padding: 1px 0.5em 1px 1em;
-  font-weight: bold;
-  text-align: right;
-  width: 10em;
-}
-table.quizreviewsummary td.cell {
-  padding: 1px 1em 1px 0.5em;
-  text-align: left;
-}
-
-#mod-quiz-mod #reviewoptionshdr .fitem,
-#adminquizreviewoptions .group {
-  float: left;
-  width: 33%;
-  clear: none;
-}
-#mod-quiz-mod #reviewoptionshdr .fitem {
-  width: 30%;
-  margin-left: 10px;
-}
-#mod-quiz-mod #reviewoptionshdr .fitemtitle,
-#adminquizreviewoptions .fitemtitle {
-  width: 100%;
-  font-weight: bold;
-  text-align: left;
-  height: 2.5em;
-  margin-left: 0;
-}
-#mod-quiz-mod #reviewoptionshdr fieldset.fgroup {
-  width: 100%;
-  text-align: left;
-  margin-left: 0;
-}
-#mod-quiz-mod #reviewoptionshdr fieldset.fgroup span,
-#adminquizreviewoptions span {
-  float: left;
-  clear: left;
-}
-#adminquizreviewoptions {
-  margin-bottom: 0.5em;
-}
-
-.quizquestionlistcontrols {
-  text-align: center;
-}
-
-#mod-quiz-report table#attempts,
-#mod-quiz-report div#commands,
-#mod-quiz-report table#itemanalysis
-{
-  width: 80%;
-  margin: auto;
-}
-#mod-quiz-report table.titlesleft td.c0
-{
-  font-weight: bold;
-}
-#mod-quiz-report table#attempts,
-#mod-quiz-report h2.main {
-  clear: both;
-}
-#mod-quiz-report table#attempts {
-  margin: 20px auto;
-}
-#mod-quiz-report table#attempts .header,
-#mod-quiz-report table#attempts .cell
-{
-  padding: 4px;
-}
-#mod-quiz-report table#attempts .header .commands {
-  display: inline;
-}
-#mod-quiz-report table#attempts .picture {
-  width: 40px;
-}
-#mod-quiz-report table#attempts td {
-  border-left-width: 1px;
-  border-right-width: 1px;
-  border-left-style: solid;
-  border-right-style: solid;
-  vertical-align: middle;
-}
-#mod-quiz-report table#attempts .header {
-  text-align: left;
-}
-#mod-quiz-report table#attempts .picture {
-  text-align: center !important;
-}
-#mod-quiz-report .controls {
-  text-align: center;
-}
-
-#mod-quiz-report table#itemanalysis {
-  margin: 20px auto;
-}
-#mod-quiz-report table#itemanalysis .header,
-#mod-quiz-report table#itemanalysis .cell
-{
-  padding: 4px;
-}
-#mod-quiz-report table#itemanalysis .header .commands {
-  display: inline;
-}
-#mod-quiz-report table#itemanalysis td {
-  border-width: 1px;
-  border-style: solid;
-}
-#mod-quiz-report table#itemanalysis .header {
-  text-align: left;
-}
-#mod-quiz-report table .numcol {
-  text-align: center;
-  vertical-align : middle !important;
-}
-
-#mod-quiz-report table#itemanalysis .uncorrect {
-  color: red;
-}
-
-#mod-quiz-report table#itemanalysis .correct {
-  color: blue;
-  font-weight : bold;
-}
-
-#mod-quiz-report table#itemanalysis .partialcorrect {
-  color: green !important;
-}
-
-#mod-quiz-report table#itemanalysis .qname {
-  color: green !important;
-}
-
-/* manual grading */
-#mod-quiz-grading table#grading
-{
-  width: 80%;
-  margin: auto;
-}
-
-#mod-quiz-grading table#grading
-{
-  margin: 20px auto;
-}
-
-#mod-quiz-grading table#grading .header,
-#mod-quiz-grading table#grading .cell
-{
-  padding: 4px;
-}
-
-#mod-quiz-grading table#grading .header .commands
-{
-  display: inline;
-}
-
-#mod-quiz-grading table#grading .picture
-{
-  width: 40px;
-}
-
-#mod-quiz-grading table#grading td
-{
-  border-left-width: 1px;
-  border-right-width: 1px;
-  border-left-style: solid;
-  border-right-style: solid;
-  vertical-align: bottom;
-}
-
-.mod-quiz .gradingdetails {
-  font-size: small;
-}
-.quizattemptcounts {
-  clear : left;
-  text-align: center;
-  margin: 6px 0;
-}
-#quiznavigation .qnbutton {
-  display: block;
-  float: left;
-  width: 1.5em;
-  height: 1.5em;
-  overflow: hidden;
-  margin: 0.3em 0.3em 0.3em 0;
-  padding: 0;
-  border: 1px solid #bbb;
-  background: #eee no-repeat top right;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  white-space: normal;
-}
-#quiznavigation #user-picture {
-  margin: 0.5em 0;
-}
-#quiznavigation #user-picture img {
-  width: auto;
-  height: auto;
-  float: left;
-}
-#quiznavigation .othernav {
-  clear: both;
-}
-#quiznavigation .othernav a,
-#quiznavigation .othernav input {
-  display: block;
-  margin: 0.5em 0;
-}
-#quiznojswarning {
-  font-size: 0.7em;
-  line-height: 1.1;
-}
-.jsenabled #quiznojswarning {
-  display: none;
-}
-.mod-quiz div.tabtree a span img.iconsmall {
-  vertical-align: baseline;
-}
-#mod-quiz-edit div.sideblock{
-  float:right;
-  width:30%;
-  right:0.3em;
-  padding-bottom:0.5em;
-  display:block;
-}
-
-#mod-quiz-edit div.quizcontents{
-  float:left;
-  width:70%;
-  display:block;
-}
-
-#mod-quiz-edit div.quizwhenbankcollapsed{
-  width:100%;
-}
-
-#mod-quiz-edit div.quizcontents,h2.main{
-  clear:left;
-}
-
-#mod-quiz-edit .addpage{
-  clear:both;
-  padding-top:0.3em;
-  float:right;
-  margin-right:2em;
-}
-
-#mod-quiz-edit h2.main{
-  display:inline;
-  padding-right:1em;
-}
-
-#mod-quiz-edit .statusdisplay {
-  clear: both;
-  margin: 0.3em 1em 0.3em 0;
-  padding: 1px ; /* Stop margin collapse. */
-}
-#mod-quiz-edit .statusdisplay p {
-  margin: 0.4em;
-}
-
-#mod-quiz-edit div.quizpage{
-  display:block;
-  clear:both;
-  width:100%;
-}
-
-#mod-quiz-edit div.quizpage span.pagetitle{
-  margin-top:0.3em;
-  float:left;
-  display:block;
-}
-
-#mod-quiz-edit div.reorder .reordercontrols .moveselectedonpage{
-  clear:right;
-  float:right;
-  padding:0.5em 0.3em;
-}
-
-#mod-quiz-edit div.reorder .reordercontrols .addnewpagesafterselected,#mod-quiz-edit .repaginatecommand{
-  float:right;
-  clear:right;
-  padding-right:1em;
-}
-
-#mod-quiz-edit div.reorder .reordercontrols .deleteselected{
-  float:right;
-  margin-right:1em;
-}
-
-#mod-quiz-edit div.reorder .reordercontrols{
-  clear:both;
-  padding-right:1em;
-  margin-top:0.5em;
-  padding-top:0.5em;
-  padding-bottom:0.5em;
-}
-
-#mod-quiz-edit div.quizpage .pagecontent{
-  margin-top:0.3em;
-  display:block;
-  float:left;
-  position:relative;
-  margin-left:0.3em;
-  margin-bottom:0.2em;
-  border-left:solid #777 thin;
-  line-height:1.3em;
-  -webkit-border-radius:0.6em;
-  -webkit-border-radius-bottomleft:0;
-  -webkit-border-radius-topleft:0;
-  border-radius:0.6em;
-  border-radius-bottomleft:0;
-  border-radius-topleft:0;
-  width:88%;
-  padding:0.15em 0 0.3em;
-}
-
-#mod-quiz-edit div.question{
-  clear:left;
-  width:100%;
-}
-
-#mod-quiz-edit div.question div.qnum{
-  display:block;
-  float:left;
-  width:1.4em;
-  padding-right:0.3em;
-  padding-left:0;
-  z-index:99;
-}
-
-#mod-quiz-edit div.reorder div.question div.qnum{
-  width:2.9em;
-  padding-top:0.1em;
-}
-/*edit tab*/
-#mod-quiz-edit div.editq div.question div.qnum{
-  padding-top:0.2em;
-}
-
-#mod-quiz-edit div.editq div.question{
-  padding-top:0.3em;
-}
-
-#mod-quiz-edit div.reorder div.question{
-  padding-top:0.2em;
-}
-
-#mod-quiz-edit div.question div.questioncontainer{
-  background-color:#ffc;
-}
-
-#mod-quiz-edit div.editq div.question div.content{
-  width:87%;
-  float:left;
-  position:relative;
-  -webkit-border-radius:0.6em;
-  -webkit-border-radius-bottomleft:0;
-  -webkit-border-radius-topleft:0;
-  border-radius:0.6em;
-  border-radius-bottomleft:0;
-  border-radius-topleft:0;
-  line-height:1.4em;
-  padding:0.5em;
-}
-
-#mod-quiz-edit .reorder div.question div.content{
-  width:87%;
-  float:left;
-  position:relative;
-  -webkit-border-radius:0.3em;
-  -webkit-border-radius-bottomleft:0;
-  -webkit-border-radius-topleft:0;
-  border-radius:0.3em;
-  border-radius-bottomleft:0;
-  border-radius-topleft:0;
-  line-height:1.2em;
-  padding:0.1em;
-}
-
-#mod-quiz-edit div.question div.content div.points{
-  top:0.5em;
-  border-left:#FFF solid 0.4em;
-  width:8.5em;
-  padding:0.2em;
-}
-#mod-quiz-edit div.question div.content div.points input{
-  width:2em;
-  padding:0;
-}
-#mod-quiz-edit div.question div.content div.points input.pointssubmitbutton{
-  width:auto;
-}
-
-#mod-quiz-edit .questionbankwindow select#catmenu_jump{
-  /* In Opera9, IE6 the width of the
-  select obeys the width of its content
-  by default. This prevents that. */
-  width:100%;
-}
-
-#mod-quiz-edit .collapsed .container{
-  display: none;
-}
-
-#mod-quiz-edit .collapsed .container{
-  display: none;
-}
-#mod-quiz-edit .questionbankwindow #showbankcmd{
-  display:none;
-}
-#mod-quiz-edit .collapsed #showbankcmd{
-  display:inline;
-}
-#mod-quiz-edit .questionbankwindow #hidebankcmd{
-  display:inline;
-}
-#mod-quiz-edit .collapsed #hidebankcmd{
-  display:none;
-}
-
-#mod-quiz-edit .questionbankwindow div.header{
-  padding-top:0.2em;
-}
-
-#randomquestiondialog_c select{
-  width:100%;
-}
-
-
-#mod-quiz-edit div.question div.content div.points,
-#mod-quiz-edit div.question div.content div.qorder{
-  line-height:1em;
-  max-width:30%;
-  position:absolute;
-  right:50px;
-  -webkit-border-radius:0.2em;
-  -webkit-border-radius-bottomleft:0;
-  -webkit-border-radius-topleft:0;
-  border-radius:0.2em;
-  border-radius-bottomleft:0;
-  border-radius-topleft:0;
-  z-index:900;
-  display:block;
-  margin:0;
-}
-
-
-#mod-quiz-edit div.question div.content .editicon{
-  width:15px;
-}
-
-#mod-quiz-edit .editq div.questioncontentcontainer  div.singlequestion img{
-  float:left;
-  padding-top:0.3em;
-  padding-right:0.3em;
-}
-
-#categoryquestions .header {
-  text-align: center;
-  padding: 0 2px;
-}
-
-#categoryquestions th.modifiername .sorters,
-#categoryquestions th.creatorname .sorters {
-  font-weight: normal;
-  font-size: 0.8em;
-}
-
-#mod-quiz-edit div.question div.content .questionname,
-#categoryquestions .questionname{
-  white-space:nowrap;
-  overflow:hidden;
-  zoom:1;
-  position:relative;
-  max-width:20%;
-}
-#mod-quiz-edit div.question div.content .singlequestion .questionname,
-#mod-quiz-edit div.question div.content .singlequestion .questiontext{
-  display:inline-block;
-}
-
-#mod-quiz-edit div.editq div.question div.content .singlequestion a .questionname,
-#mod-quiz-edit div.editq div.question div.content .singlequestion a .questiontext{
-  float:left;
-}
-
-#mod-quiz-edit .quizquestionlistcontrols{
-  display:inline;
-}
-
-#mod-quiz-edit div.question div.content .questiontext,
-#categoryquestions .questiontext{
-  -o-text-overflow:ellipsis;
-  text-overflow:ellipsis;
-  position:relative;
-  zoom:1;
-  padding-left:0.3em;
-  max-width:40%;
-  overflow:hidden;
-  white-space:nowrap;
-  text-overflow:ellipsis;
-}
-#mod-quiz-edit div.editq div.question div.description div.content .questiontext {
-  max-width: 75%;
-}
-
-#mod-quiz-edit div.quizpage .pagecontent .pagestatus{
-  -webkit-border-radius-bottomright:0.3em;
-  -webkit-border-radius-topright:0.3em;
-  border-radius-bottomright:0.3em;
-  border-radius-topright:0.3em;
-  margin:0.3em;
-  padding:0.1em 0.1em 0.1em 0.3em;
-}
-
-#mod-quiz-edit div.question div.content .questiontype{
-  display:block;
-  clear:left;
-  float:left;
-}
-
-#mod-quiz-edit div.question div.content .questionpreview{
-  display:block;
-  float:left;
-  margin-left:0.3em;
-  padding-left:0.2em;
-  padding-right:0.2em;
-}
-
-#mod-quiz-edit div.question div.content div.quiz_randomquestion .questionpreview{
-  display:inline;
-  float:none;
-}
-
-#mod-quiz-edit div.question div.content div.questioncontrols{
-  float:right;
-  width:45px;
-  position:absolute;
-  right:0.3em;
-  top:0;
-  z-index:900;
-  display:block;
-  padding:0.2em;
-}
-
-#mod-quiz-edit div.question div.content div.questioncontrols img.upwithoutdown{
-  padding-right:12px;
-  display:inline;
-}
-
-#mod-quiz-edit .quizpagedelete{
-  position:absolute;
-  top:0.2em;
-  right:0.2em;
-  display:inline;
-  z-index:900;
-}
-
-#mod-quiz-edit .quizpagedelete img {
-  background-color:#d6d6d6;
-  padding:0.6em;
-}
-
-#mod-quiz-edit .pagecontrols {
-  clear:both;
-  margin-left:0.5em;
-  padding-top:0.5em;
-}
-
-#mod-quiz-edit .pagecontrols .singlebutton {
-  float:left;
-  margin-left: 1em;
-}
-#mod-quiz-edit .pagecontrols .helplink {
-  float:left;
-}
-
-#mod-quiz-edit div.quizpage .pagecontent form.randomquestionform div{
-  /* it is a mystery why this has to be inline-table but
-     otherwise the layout gets screwed, even if
-     it is "inline" */
-  display: inline-table;
-}
-
-#mod-quiz-edit div.quizpage .pagecontent form.randomquestionform div input{
-  display: inline;
-}
-
-/* a CSS class YUI container creates on the fly: */
-#mod-quiz-edit div#randomquestiondialog_c{
-  width:90%;
-}
-
-
-#mod-quiz-edit div#randomquestiondialog_c .mform,
-#mod-quiz-edit div#repaginatedialog .mform{
-  margin-left:auto;
-  margin-right:auto;
-}
-
-#mod-quiz-edit div.container div.generalbox{
-  position:relative;
-  display:block;
-  border:0 none;
-  margin:0;
-  padding:0;
-}
-
-#mod-quiz-edit .questioncontentcontainer div.randomquestionqlist{
-  padding-left:0.2em;
-  padding-right:0.2em;
-  clear:both;
-  margin:0.5em;
-  margin-top:0.8em;
-}
-#mod-quiz-edit .questioncontentcontainer div.randomquestionqlist .totalquestionsinrandomqcategory{
-  overflow:auto;
-  white-space:normal;
-}
-
-
-#mod-quiz-edit .questioncontentcontainer div.randomquestionqlist ul{
-  list-style-type:none;
-  margin:0;
-  padding:0;
-}
-#mod-quiz-edit .reorder .questioncontentcontainer .quiz_randomquestion{
-
-  position:relative;
-}
-
-#mod-quiz-edit .reorder div.question div.content div.quiz_randomquestion{
-  line-height:1em;
-}
-
-#mod-quiz-edit .reorder .questioncontentcontainer .randomquestioncategory label{
-  max-width: 25%;
-  overflow:hidden;
-  padding-left:0.3em;
-  white-space:nowrap;
-  display:inline-block;
-}
-#mod-quiz-edit .reorder .questioncontentcontainer .randomquestionfromcategory label{
-  overflow:hidden;
-  white-space:nowrap;
-  display:inline-block;
-}
-
-#mod-quiz-edit .editq div.question div.content .randomquestioncategory{
-  margin-top:0.4em;
-  position:relative;
-  display:inline-block;
-
-}
-
-#mod-quiz-edit .editq div.question div.content .randomquestioncategory a{
-  display:block;
-  max-width:15em;
-  overflow: hidden;
-  text-overflow:ellipsis;
-  -o-text-overflow:ellipsis;
-  white-space: nowrap;
-  float:left;
-  position:relative;
-}
-#mod-quiz-edit .editq div.question div.content .questionpreview{
-  float:left;
-}
-#mod-quiz-edit .editq div.question div.content .questionpreview a{
-  font-weight:normal;
-  margin-left:0em;
-  display:inline;
-  float:none;
-}
-#mod-quiz-edit .editq div.question div.content .randomquestioncategory .questionpreview img{
-  padding-right:0.3em;
-}
-
-#mod-quiz-edit .questioncontentcontainer div.randomquestionqlist ul li img{
-  padding-right:0.3em;
-}
-
-
-#mod-quiz-edit .reorder .questioncontentcontainer .randomquestioncategory,
-#mod-quiz-edit .reorder .questioncontentcontainer .randomquestionfromcategory,
-#mod-quiz-edit .reorder div.question div.content .questionpreview{
-  display:inline;
-  float:none;
-}
-
-#mod-quiz-edit .reorder .questioncontentcontainer{
-  position:relative;
-  overflow:hidden;
-  white-space:nowrap;
-}
-
-#mod-quiz-edit .reorder .questioncontentcontainer .randomquestioncategory{
-  overflow:hidden;
-  white-space:nowrap;
-}
-
-#mod-quiz-edit .reorder fieldset{
-  display:inline;
-}
-
-#mod-quiz-edit .questioncontentcontainer div.randomquestionqlist ul li{
-  clear:left;
-  width:100%;
-  overflow:hidden;
-  white-space:nowrap;
-}
-
-#mod-quiz-edit .questioncontentcontainer div.randomquestionqlist ul li span{
-  display:inline;
-}
-
-/*start question bank*/
-.questionbankwindow .choosecategory,
-.questionbankwindow .createnewquestion {
-  padding: 0.3em;
-}
-.questionbankwindow .createnewquestion .singlebutton {
-  display: inline;
-}
-.questionbankwindow #catmenu_jump {
-  display: block;
-}
-#mod-quiz-edit .questionbankwindow .createnewquestion select,
-#mod-quiz-edit .questionbankwindow #catmenu select,
-#mod-quiz-edit .questionbankwindow #menucategory {
-  width: 100%;
-}
-table#categoryquestions {
-  width: 100%;
-  overflow: hidden;
-  table-layout: fixed;
-}
-
-table#categoryquestions td,#mod-quiz-edit table#categoryquestions th{
-  overflow:hidden;
-  white-space:nowrap;
-}
-
-#categoryquestions .iconcol {
-  width: 15px;
-  text-align: center;
-  padding: 0;
-}
-
-#categoryquestions .checkbox {
-  width: 19px;
-  text-align: center;
-  padding: 0;
-}
-
-#categoryquestions .qtype {
-  text-align: center;
-}
-
-#categoryquestions .qtype {
-  width: 24px;
-  padding: 0;
-}
-
-#categoryquestions .questiontext p {
-  margin: 0;
-}
-.categoryinfo {
-  padding: 0.3em;
-}
-
-#mod-quiz-edit .paging{
-  margin-top:0;
-  margin-bottom:0;
-  display:block;
-}
-
-#mod-quiz-edit .pagingbottom{
-  padding-bottom:0.3em;
-}
-
-#mod-quiz-edit div.questionbank form .invisiblefieldset{
-  clear:both;
-}
-
-#mod-quiz-edit .sideblock .content{
-  padding:0;
-}
-
-#mod-quiz-edit .questionbank .categorysortopotionscontainer{
-  padding-top:0.5em;
-  margin-top:0.3em;
-}
-
-.questionbank div.categoryquestionscontainer,
-.questionbank .categorysortopotionscontainer,
-.questionbank .categorypagingbarcontainer,
-.questionbank .categoryselectallcontainer{
-  padding-left:0.3em;
-  padding-right:0.3em;
-}
-
-.noquestionsincategory{
-  clear:both;
-  padding-top:1em;
-  padding-bottom:1em;
-}
-
-.modulespecificbuttonscontainer{
-  padding-left:0.3em;
-  padding-right:0.3em;
-}
-
-#mod-quiz-edit div#footer{
-  clear:both;
-  padding-top:1em;
-}
-
-
-/* these will toggle if js is enabled */
-body #quizcontentsblock #repaginatedialog{
-  display: none;
-}
-body.jsenabled #quizcontentsblock #repaginatedialog{
-  display: block;
-}
-body.jsenabled #quizcontentsblock #repaginatedialog .hd{
-  display:block;
-}
-body.jsenabled #quizcontentsblock #repaginatedialog .bd{
-  padding:1em;
-}
-body.jsenabled #quizcontentsblock  .repaginatecommand #repaginatecommand{
-  display:block;
-}
-
-/***
- *** Modules: Resource
- ***/
-
-#mod-resource-view .resourcecontent {
-  text-align:center;
-  margin:20px;
-}
-
-#mod-resource-view .resourcepdf {
-  width: 100%;
-  padding-top: 15px;
-  text-align: center
-}
-
-.resourcecontent object {
-  height:480px;
-  width:600px;
-}
-
-.resourcepdf object{
-  height: 800px;
-  width: 800px;
-}
-
-.mod-resource .modified {
-  text-align:center;
-}
-
-.mod-resource .popupnotice {
-  text-align:center;
-  margin:40px;
-}
-
-#mod-resource-view div#footer {
-  margin-top: 5px;
-}
-
-/***
- *** Modules: Scorm
- ***/
-
-/***
- *** Modules: Survey
- ***/
-.resultgraph {
-  text-align:center;
-  border:1px solid;
-}
-
-.reportsummary,
-.studentreport,
-.reportbuttons {
-  text-align:center;
-}
-
-.centerpara {
-  text-align:center;
-}
-
-.fullnamecell {
-  width:10%;
-  vertical-align:top;
-  white-space: nowrap;
-}
-
-.questiontext {
-  font-size:1em;
-}
-
-.smalltext {
-  font-size: 0.75em;
-}
-
-#surveyform th {
-  font-weight: normal;
-  text-align: left;
-}
-#surveyform th.hresponse {
-  text-align: center;
-  width: 9%;
-}
-
-.rblock label {
-  display: block;
-  text-align: center;
-}
-
-.foundthat,
-.preferthat {
-  white-space: nowrap;
-}
-
-.qnummiddlecell {
-  vertical-align:middle;
-}
-
-.optioncell {
-  width: 50%;
-  vertical-align: top;
-}
-
-.buttoncell {
-  width:5%;
-}
-
-.questioncell {
-  width:50%;
-  vertical-align:top;
-}
-
-.whitecell {
-  background-color:white;
-}
-/***
- *** Modules: Wiki
- ***/
-.sideblockheading,
-.howtowiki {
-  text-align:right;
-}
-
-.wikisearchform,
-.wikilinksblock,
-wikiadminactions {
-  text-align:center;
-}
-
-.wikilinkright{
-  text-align:right;
-  padding-bottom: 0.5em;
-}
-
-.wikiexportbox{
-  margin-left:auto;
-  margin-right:auto;
-}
-/***
- *** Modules: Workshop
- ***/
-.redfont {
-  color: red;
-}
-
-.workshopuploadform,
-.workshopkey {
-  text-align:center;
-}
-
 
 /***
  *** Help files (/lang/-/help)
@@ -5732,9 +4063,10 @@ wikiadminactions {
  *
  */
 .comment-ctrl {
+  max-width: 200px;
   font-size: 12px;
   display: none;
-  margin:0 auto;
+  margin:0;
   padding:0;
 }
 .comment-ctrl h5 {
@@ -5758,6 +4090,9 @@ wikiadminactions {
 }
 .comment-meta span {
   color:grey;
+}
+
+.comment-list-wrapper {
 }
 
 .comment-list {
@@ -5793,12 +4128,6 @@ wikiadminactions {
   padding:0;
 }
 .comment-content p{
-  width: 90%;
-  white-space: pre-wrap; /* css-3 */
-  white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */
-  white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
   padding:0;
   margin:0 18px 0 0;
 }
@@ -5817,14 +4146,14 @@ wikiadminactions {
   position:absolute;
   width:10px;
   height:10px;
-  background-image:url(shadow_corners.png);
+  background-image:url([[pix:theme|shadow_corners]]);
   background-repeat:no-repeat;
 }
 .divshadow .shadow_top {
   top:-10px;
   right:0px;
   width:100%;
-  background-image:url(shadow_top_bottom.png);
+  background-image:url([[pix:theme|shadow_top_bottom]]);
   background-position:0px 0px;
   background-repeat:repeat-x;
 }
@@ -5832,7 +4161,7 @@ wikiadminactions {
   bottom:-10px;
   right:0px;
   width:100%;
-  background-image:url(shadow_top_bottom.png);
+  background-image:url([[pix:theme|shadow_top_bottom]]);
   background-position:0px 100%;
   background-repeat:repeat-x;
 }
@@ -5840,7 +4169,7 @@ wikiadminactions {
   top:0px;
   left:-10px;
   height:100%;
-  background-image:url(shadow_left_right.png);
+  background-image:url([[pix:theme|shadow_left_right]]);
   background-position:0px 0px;
   background-repeat:repeat-y;
 }
@@ -5848,7 +4177,7 @@ wikiadminactions {
   bottom:0px;
   right:-10px;
   height:100%;
-  background-image:url(shadow_left_right.png);
+  background-image:url([[pix:theme|shadow_left_right]]);
   background-position:100% 0px;
   background-repeat:repeat-y;
 }
@@ -5872,54 +4201,249 @@ wikiadminactions {
   left:-10px;
   background-position:0px 100%;
 }
-.filemanager-toolbar{
-    margin: 5px 0;
+
+
+/*********** File picker **********/
+
+/* Copyright (c) 2006 Yahoo! Inc. All rights reserved. */
+/* copy from yui/examples/treeview/assets/css/folders/tree.css */
+/* first or middle sibling, no children */
+.file-picker .ygtvtn { background: url(../pix/y/tn.gif) 0 0 no-repeat; width:17px; height:22px; }
+/* first or middle sibling, collapsable */
+.file-picker .ygtvtm { background: url(../pix/y/tm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* first or middle sibling, collapsable, hover */
+.file-picker .ygtvtmh { background: url(../pix/y/tmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* first or middle sibling, expandable */
+.file-picker .ygtvtp { background: url(../pix/y/tp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* first or middle sibling, expandable, hover */
+.file-picker .ygtvtph { background: url(../pix/y/tph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* last sibling, no children */
+.file-picker .ygtvln { background: url(../pix/y/ln.gif) 0 0 no-repeat; width:17px; height:22px; }
+/* Last sibling, collapsable */
+.file-picker .ygtvlm { background: url(../pix/y/lm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* Last sibling, collapsable, hover */
+.file-picker .ygtvlmh { background: url(../pix/y/lmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* Last sibling, expandable */
+.file-picker .ygtvlp { background: url(../pix/y/lp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* Last sibling, expandable, hover */
+.file-picker .ygtvlph { background: url(../pix/y/lph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+/* Loading icon */
+.file-picker .ygtvloading { background: url(../pix/y/loading.gif) 0 0 no-repeat; width:16px; height:22px; }
+/* the style for the empty cells that are used for rendering the depth
+ * of the node */
+.file-picker .ygtvdepthcell { background: url(../pix/y/vline.gif) 0 0 no-repeat; width:17px; height:22px; }
+.file-picker .ygtvblankdepthcell { width:17px; height:22px; }
+/* the style of the div around each node */
+.file-picker .ygtvitem { }
+.file-picker .ygtvitem  table{ margin-bottom:0; }
+.file-picker .ygtvitem  td { border:none;padding:0; }
+/* the style of the div around each node's collection of children */
+.file-picker .ygtvchildren { }
+* html .file-picker .ygtvchildren { height:1%; }
+/* the style of the text label in ygTextNode */
+.file-picker .ygtvlabel, .file-picker .ygtvlabel:link, .file-picker .ygtvlabel:visited, .file-picker .ygtvlabel:hover { margin-left:2px; text-decoration: none; }
+
+
+.file-picker{font-size:12px;}
+.file-picker strong{background:#FFFFCC}
+.file-picker a{color: #336699}
+.file-picker a:hover{background:#003366;color:white}
+.file-picker .fp-panel{padding:0;margin:0; text-align:left;}
+.file-picker .fp-login-form{text-align:center}
+.file-picker .fp-searchbar{float:right}
+.file-picker .fp-viewbar{width:300px;float:left}
+.file-picker .fp-toolbar{padding: .8em;background: #FFFFCC;text-align:center;margin: 3px}
+.file-picker .fp-toolbar a{padding: 0 .5em}
+.file-picker .fp-list{list-style-type:none;padding:0;float:left;width:100%;margin:0;}
+.file-picker .fp-list li{border-bottom:1px dotted gray;margin-bottom: 1em;}
+.file-picker .fp-repo-name{display:block;padding: .5em;margin-bottom: .5em}
+.file-picker .fp-pathbar{margin: .4em;border-bottom: 1px dotted gray;}
+.file-picker .fp-pathbar a{padding: .4em;}
+.file-picker .fp-rename-form{text-align:center}
+.file-picker .fp-rename-form p{margin: 1em;}
+.file-picker .fp-upload-form{margin: 2em 0;text-align:center}
+.file-picker .fp-upload-btn{clear:both;margin-top: 2em;}
+.file-picker .fp-upload-btn a{cursor: default;background: white;border:1px solid gray;color:black;padding: .5em}
+.file-picker .fp-upload-btn a:hover {background: grey;color:white}
+.file-picker .fp-paging{margin:1em .5em; clear:both;text-align:center;line-height: 2.5em;}
+.file-picker .fp-paging a{padding: .5em;border: 1px solid #CCC}
+.file-picker .fp-paging a.cur_page{border: 1px solid blue}
+.file-picker .fp-popup{text-align:center}
+.file-picker .fp-grid{float:left;text-align:center;}
+.file-picker .fp-grid div{overflow: hidden}
+.file-picker .fp-grid p{margin:0;padding:0;background: #FFFFCC}
+.file-picker .fp-grid .label{height:48px;text-align:center}
+.file-picker .fp-grid span{color:gray}
+.file-picker .fp-error {padding: 2em 0; margin: 3em 5px;text-align:center;background: #FFBBBB}
+.file-picker .fp-msg {padding: 2em 0; margin: 3em 5px;text-align:center;background: green}
+/* file picker search dialog */
+.file-picker div.bd{text-align:left}
+
+
+/* TODO: Fix IE6 somehow
+.yui-skin-sam .yui-panel .hd{}
+*/
+
+
+
+/*********** IE6 HACKS ***********/
+
+.ie6 .tabtree {
+  height: 100%;
 }
-.filemanager-toolbar a:link, .filemanager-toolbar a:visited {
-    border: 1px solid grey;
-    background: #ccc;
-    color: black;
-    padding: 3px;
+
+.ie6 .tabrow0 {
+  padding-top: 10px;
 }
-.filemanager-toolbar a:hover {
-    background: white;
-    text-decoration: none;
+
+.ie6 .tabrow0 li {
+  margin-left: 0;
 }
-.fm-breadcrumb {
-    margin:0;
+
+.ie6 .tabrow0 li.first {
+  margin-left: -4px;
+  margin-right: -4px;
 }
-.filemanager-container {
-    padding: 5px;
-    margin: 6px 0;
+
+.ie6 .tabrow0 li.last a {
+  margin-right: 0;
 }
-.filemanager-container ul{
-    margin:0;
-    padding:0;
-    list-style-type:none;
+
+.ie6 .tabrow0 li.onerow {
+  margin-right: 0;
 }
-.filemanager-container li{
-    clear:both;
+
+.ie6 .tabrow0 a {
+  padding: 0 0 0 13px;
 }
-#fm-move-div {
-    margin: 6px;
+
+.ie6 .tabrow0 a span {
+  padding: 12px 1em 4px 0;
 }
-#fm-move-div strong{
-    color:red;
+
+.ie6 .tabrow0 div,
+.tabrow0 ul {
+  top: 3.5em;
+  padding: 0.2em 0;
 }
-.fm-file-menu {
-    width: 18px;
-    height: 18px;
-    float: left;
+
+.ie6 form.mform input {
+  margin-left: expression((this.type=="text"||this.type=="file"||this.type=="password")?'-10px':'0');
 }
-.fm-file-menu img {
-    width: 16px;
+
+#admin-user-user_bulk.ie6 form.mform input,
+#admin-user.ie6 form.mform input {
+  margin-left: 0;
 }
-.fm-file-name {
-    float:left;
+
+.ie6 form.mform textarea {
+ margin-left: -10px;
 }
-.fm-file-entry{
-    border: 1px solid red;
+
+.ie6 .que .info {
+  display: inline;
 }
-.fm-operation {
-    font-weight: bold;
+
+.ie6 #adminsettings .form-setting,
+.ie6 #adminsettings .form-description {
+  display:inline-block; padding-left:2px;
+}
+
+.ie6.course-view li.activity {
+  height:0;
+}
+#mod-quiz-edit.ie6 div.question div.content .questiontext,
+#mod-quiz-edit.ie6 #categoryquestions .questionname{
+    /*ie6 shows this as an arrow if this is not specified*/
+    cursor: pointer;
+}
+#mod-quiz-edit.ie6 div.question div.content .questionname,
+#mod-quiz-edit.ie6 #categoryquestions .questiontext{
+    /*ie6 shows this as an arrow if this is not specified*/
+    cursor: pointer;
+}
+.mod-quiz.ie6 div.tabtree a span img.iconsmall {
+  margin: 0;
+  vertical-align: baseline;
+  position: relative;
+  top: 1px;
+}
+#mod-quiz-edit.ie6 div.question div.content .questiontext,#categoryquestions .questiontext{
+    width:50%;
+}
+#mod-quiz-edit.ie6 div.question div.content .questionname,#categoryquestions .questionname{
+    width:20%;
+}
+#mod-quiz-edit.ie6 .editq div.question div.content .randomquestioncategory a{
+    width:40%;
+}
+#mod-quiz-edit.ie6 .reorder .questioncontentcontainer .randomquestioncategory label{
+    width: 35%;
+}
+
+.ie6 #help_icon_tooltip .yui-tt-shadow-visible {
+  background-color: transparent;
+}
+
+/*********** IE7 HACKS ***********/
+
+.ie7 .tabrow0 li {
+  margin-left: 0;
+}
+
+.ie7 .tabrow0 li.first {
+  margin-right: -4px;
+}
+
+.ie7 .tabrow0 li.onerow {
+  margin-right: 0;
+}
+
+.ie7 .tabrow0 a {
+  display: inline-block;
+  padding: 8px 0 0.35em 13px;
+  line-height: 1.5em;
+}
+
+.ie7 .tabrow0 a span {
+  padding: 10px 1em 10px 0;
+}
+
+.ie7 .tabrow0 div,
+.tabrow0 ul {
+  top: 2.6em;
+  padding: 0.2em 0;
+}
+
+.ie7 .tabrow0 div.empty {
+  margin-right: 0;
+}
+
+.ie7 .sideblock {
+  overflow: hidden;
+}
+
+.ie7 .sideblock .content {
+  word-wrap: break-word;
+}
+
+/*fix for misalignment of text fields in ie */
+.ie7 form.mform input[type=text],
+.ie7 form.mform input[type=file],
+.ie7 form.mform input[type=password] {
+ margin-left: -10px;
+}
+
+.ie7 form.mform textarea {
+ margin-left: -10px;
+}
+
+.ie7 form.mform .fcheckbox input {
+  margin-left: -3px;
+}
+.ie7.mod-quiz div.tabtree a span img.iconsmall {
+  margin: 0;
+  vertical-align: baseline;
+  position: relative;
+  top: 2px;
 }
